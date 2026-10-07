@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question 11 - Specificity Rules</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Internal CSS - Overrides External CSS for matching elements */
+    .contact-input {
+      background-color: lightcyan;
+      border: 2px solid blue;
+    }
+  </style>
+</head>
+<body>
+  <form style="max-width: 400px; margin: 20px auto;">
+    <h2>CSS Specificity Demo</h2>
+    
+    <!-- Styled by Internal CSS (Cyan background) -->
+    <p>Using Internal/External rules:</p>
+    <input type="text" class="contact-input" value="Styled by Internal CSS">
+
+    <!-- Styled by Inline CSS (Pink background) - Overrides Internal/External -->
+    <p>Using Inline style attribute:</p>
+    <input type="text" class="contact-input" style="background-color: lightpink; border-color: red;" value="Styled by Inline CSS">
+  </form>
+</body>
+</html>

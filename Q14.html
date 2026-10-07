@@ -1,0 +1,23 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question 14 - Range Slider</title>
+  <style>
+    .slider-container {
+      max-width: 350px;
+      margin: 30px auto;
+      font-family: Arial, sans-serif;
+    }
+    .val-display { font-weight: bold; color: #007bff; }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <h2>Select Quantity</h2>
+    <label for="rangeInput">Volume Level:</label>
+    <input type="range" id="rangeInput" min="0" max="100" value="50" oninput="valDisplay.value = this.value">
+    <p>Current Level: <output id="valDisplay" class="val-display">50</output> %</p>
+  </div>
+</body>
+</html>

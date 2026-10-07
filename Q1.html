@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question 1 - Styled Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form class="custom-form">
+    <h2>User Registration</h2>
+    
+    <label>Username:</label>
+    <input type="text" placeholder="Enter username">
+
+    <label>Password:</label>
+    <input type="password" placeholder="Enter password">
+
+    <label>Gender:</label>
+    <div class="inline-group">
+      <input type="radio" id="male" name="gender"><label for="male">Male</label>
+      <input type="radio" id="female" name="gender"><label for="female">Female</label>
+    </div>
+
+    <label>Interests:</label>
+    <div class="inline-group">
+      <input type="checkbox" id="coding"><label for="coding">Coding</label>
+      <input type="checkbox" id="music"><label for="music">Music</label>
+    </div>
+
+    <label>Country:</label>
+    <select>
+      <option>India</option>
+      <option>USA</option>
+      <option>UK</option>
+    </select>
+
+    <label>Bio:</label>
+    <textarea rows="4" placeholder="Tell us about yourself..."></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
+ 

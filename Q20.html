@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question 20 - Multi-Step Onboarding</title>
+  <style>
+    .step-form { max-width: 400px; margin: 30px auto; font-family: sans-serif; }
+    .step { display: none; }
+    .step.active { display: block; }
+    .btn-container { margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <div class="step-form">
+    <!-- Step 1 -->
+    <div id="step1" class="step active">
+      <h2>Step 1: Account Info</h2>
+      <label>Email:</label>
+      <input type="email"><br><br>
+      <button onclick="showStep(2)">Next &rarr;</button>
+    </div>
+
+    <!-- Step 2 -->
+    <div id="step2" class="step">
+      <h2>Step 2: Personal Info</h2>
+      <label>Full Name:</label>
+      <input type="text"><br><br>
+      <button onclick="showStep(1)">&larr; Back</button>
+      <button onclick="showStep(3)">Next &rarr;</button>
+    </div>
+
+    <!-- Step 3 -->
+    <div id="step3" class="step">
+      <h2>Step 3: Complete</h2>
+      <p>Thank you! Your setup is ready.</p>
+      <button onclick="showStep(2)">&larr; Back</button>
+      <button onclick="alert('Submitted!')">Finish</button>
+    </div>
+  </div>
+
+  <script>
+    function showStep(stepNumber) {
+      document.querySelectorAll('.step').forEach(el => el.classList.remove('active'));
+      document.getElementById('step' + stepNumber).classList.add('active');
+    }
+  </script>
+</body>
+</html>

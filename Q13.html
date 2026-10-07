@@ -1,0 +1,67 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question 13 - Custom Controls</title>
+  <style>
+    .custom-control {
+      position: relative;
+      display: inline-block;
+      padding-left: 30px;
+      margin-right: 15px;
+      cursor: pointer;
+      user-select: none;
+      font-family: sans-serif;
+    }
+    /* Hide default inputs */
+    .custom-control input { position: absolute; opacity: 0; cursor: pointer; }
+
+    /* Custom Checkbox / Radio Box */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: #eee;
+      border-radius: 4px;
+    }
+    .custom-radio .checkmark { border-radius: 50%; }
+
+    /* Hover effect */
+    .custom-control:hover input ~ .checkmark { background-color: #ccc; }
+
+    /* Active state */
+    .custom-control input:checked ~ .checkmark { background-color: #2196F3; }
+
+    /* Inner check indicator using ::after */
+    .checkmark::after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    .custom-control input:checked ~ .checkmark::after { display: block; }
+
+    /* Indicator styles */
+    .custom-checkbox .checkmark::after {
+      left: 7px; top: 3px; width: 5px; height: 10px;
+      border: solid white; border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+  <div style="margin: 40px;">
+    <h2>Custom Styled Controls</h2>
+    <label class="custom-control custom-checkbox"> Custom Checkbox
+      <input type="checkbox">
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="custom-control custom-radio"> Custom Radio
+      <input type="radio" name="r1">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+</body>
+</html>

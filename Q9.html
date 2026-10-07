@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question 9 - Grouped Survey Form</title>
+  <style>
+    form { max-width: 500px; margin: 20px auto; font-family: Arial, sans-serif; }
+    fieldset {
+      border: 2px solid #007bff;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    legend {
+      padding: 0 10px;
+      color: #007bff;
+      font-weight: bold;
+    }
+    .field-group { margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>Personal Info</legend>
+      <div class="field-group">
+        <label>Full Name:</label>
+        <input type="text">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Survey Details</legend>
+      <div class="field-group">
+        <label>How did you hear about us?</label>
+        <select><option>Social Media</option><option>Friend</option></select>
+      </div>
+    </fieldset>
+  </form>
+</body>
+</html>

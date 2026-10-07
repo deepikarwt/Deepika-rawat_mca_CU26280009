@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question 17 - Hidden Input Field</title>
+  <style>
+    form { max-width: 350px; margin: 30px auto; font-family: Arial, sans-serif; }
+  </style>
+</head>
+<body>
+  <form action="/submit-endpoint" method="POST">
+    <h2>User Profile Settings</h2>
+    
+    <!-- Hidden Field transferring session token/ID -->
+    <input type="hidden" name="sessionId" value="XYZ987654321">
+    <input type="hidden" name="userId" value="USR_1024">
+
+    <label for="uname">Display Name:</label><br>
+    <input type="text" id="uname" name="username" value="John Doe"><br><br>
+    
+    <button type="submit">Save Changes</button>
+  </form>
+</body>
+</html>

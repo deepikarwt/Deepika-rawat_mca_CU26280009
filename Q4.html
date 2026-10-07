@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question 4 - Flexbox Frame Layout</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { display: flex; flex-direction: column; height: 100vh; font-family: sans-serif; }
+    header { background: #333; color: white; padding: 15px; text-align: center; }
+    .main-container { display: flex; flex: 1; }
+    nav { width: 200px; background: #f4f4f4; padding: 15px; border-right: 1px solid #ccc; }
+    main { flex: 1; padding: 20px; }
+  </style>
+</head>
+<body>
+  <header>Header Bar</header>
+  <div class="main-container">
+    <nav>
+      <h3>Navigation</h3>
+      <ul>
+        <li>Dashboard</li>
+        <li>Profile</li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Main Content</h2>
+      <p>This mimics a frame structure using modern CSS Flexbox.</p>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question 19 - Typography Styling</title>
+  <style>
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #444;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      line-height: 1.5;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    input::placeholder {
+      letter-spacing: 0.5px;
+      font-style: italic;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h2>Registration</h2>
+    <label>Username</label>
+    <input type="text" placeholder="enter unique username">
+    
+    <label>Email Address</label>
+    <input type="email" placeholder="example@domain.com">
+  </form>
+</body>
+</html>

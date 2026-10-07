@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question 12 - Responsive Payment</title>
+  <style>
+    .payment-form {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      font-family: Arial, sans-serif;
+    }
+    .field-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .field-row div { flex: 1; }
+    input { width: 100%; padding: 8px; box-sizing: border-box; }
+
+    /* Mobile Responsive Rule */
+    @media (max-width: 480px) {
+      .field-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <form class="payment-form">
+    <h2>Payment Details</h2>
+    <div class="field-row">
+      <div>
+        <label>Card Number</label>
+        <input type="text" placeholder="1234 5678 9101 1121">
+      </div>
+      <div>
+        <label>CVV</label>
+        <input type="text" placeholder="123">
+      </div>
+    </div>
+  </form>
+</body>
+</html>

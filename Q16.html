@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question 16 - Float & Clear Alignment</title>
+  <style>
+    .form-box { max-width: 500px; margin: 20px auto; font-family: sans-serif; }
+    .form-group { width: 100%; margin-bottom: 15px; }
+    .form-group::after { content: ""; display: table; clear: both; } /* Clearfix */
+    
+    .label-col { float: left; width: 30%; font-weight: bold; }
+    .input-col { float: left; width: 70%; }
+    .input-col input, .input-col select { width: 100%; padding: 6px; box-sizing: border-box; }
+  </style>
+</head>
+<body>
+  <form class="form-box">
+    <h2>Employee Evaluation</h2>
+    <div class="form-group">
+      <div class="label-col">Employee Name:</div>
+      <div class="input-col"><input type="text"></div>
+    </div>
+    <div class="form-group">
+      <div class="label-col">Performance:</div>
+      <div class="input-col">
+        <select>
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Needs Improvement</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
